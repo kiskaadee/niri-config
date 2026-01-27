@@ -4,7 +4,7 @@
 // Programs to launch when niri starts
 
 // Native shell - noctalia
-spawn-at-startup "noctalia"
+spawn-at-startup "qs" "-c" "noctalia-shell"
 
 // Xwayland compatibility layer
 spawn-at-startup "xwayland-satellite"
