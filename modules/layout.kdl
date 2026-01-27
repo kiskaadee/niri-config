@@ -1,0 +1,62 @@
+// ===================================================
+// LAYOUT CONFIGURATION
+// ===================================================
+// Window gaps, borders, focus rings, and shadows
+
+layout {
+    // Window gaps
+    gaps 16
+
+    // Center focused column behavior
+    center-focused-column "never"
+
+    // Preset column widths for Mod+R toggle
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    // Let windows decide their initial width
+    default-column-width {}
+
+    // Focus ring configuration
+    focus-ring {
+        width 4
+        
+        // Active monitor color
+        active-color "#7fc8ff"
+        
+        // Inactive monitors - dimmed for better orientation
+        inactive-color "#45475a"
+    }
+
+    // Border configuration (currently disabled)
+    border {
+        off
+
+        width 4
+        active-color "#ffc87f"
+        inactive-color "#505050"
+        urgent-color "#9b0000"
+    }
+
+    // Shadow configuration (currently disabled)
+    shadow {
+        // Uncomment the next line to enable shadows
+        // on
+
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+
+    // Struts - outer gaps for panels
+    struts {
+        // left 64
+        // right 64
+        // top 64
+        // bottom 64
+    }
+}

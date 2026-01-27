@@ -1,0 +1,30 @@
+// ===================================================
+// WINDOW RULES
+// ===================================================
+// Per-application window behavior configuration
+
+// Work around WezTerm's initial configure bug
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Open Firefox picture-in-picture as floating
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// Example: block out password managers from screen capture (disabled)
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    block-out-from "screen-capture"
+}
+
+// Example: enable rounded corners for all windows (disabled)
+/-window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}

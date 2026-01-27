@@ -1,0 +1,13 @@
+// ===================================================
+// STARTUP APPLICATIONS
+// ===================================================
+// Programs to launch when niri starts
+
+// Native shell - noctalia
+spawn-at-startup "noctalia"
+
+// Xwayland compatibility layer
+spawn-at-startup "xwayland-satellite"
+
+// Alternative: waybar (commented out)
+// spawn-at-startup "waybar"

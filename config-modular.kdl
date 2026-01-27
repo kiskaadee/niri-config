@@ -1,0 +1,45 @@
+// ===================================================
+// NIRI CONFIGURATION (MODULAR)
+// ===================================================
+// This config is in the KDL format: https://kdl.dev
+// Check the wiki: https://yalter.github.io/niri/Configuration:-Introduction
+//
+// This configuration uses the modular include system.
+// Each module is a separate file in the modules/ directory.
+//
+// Modules are loaded in order and settings are merged/overridden
+// based on their position. See the wiki for details:
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Include
+
+// ===================================================
+// HARDWARE CONFIGURATION
+// ===================================================
+
+// Monitor outputs (dual-monitor setup)
+include "modules/outputs.kdl"
+
+// Input devices (keyboard, mouse, touchpad, focus behavior)
+include "modules/input.kdl"
+
+// ===================================================
+// WINDOW MANAGEMENT
+// ===================================================
+
+// Layout settings (gaps, borders, focus rings)
+include "modules/layout.kdl"
+
+// Per-application window rules
+include "modules/window-rules.kdl"
+
+// ===================================================
+// USER INTERFACE
+// ===================================================
+
+// Keybindings and shortcuts
+include "modules/binds.kdl"
+
+// Startup applications
+include "modules/startup.kdl"
+
+// General preferences (animations, screenshots, etc.)
+include "modules/preferences.kdl"

@@ -1,0 +1,16 @@
+// ===================================================
+// OUTPUT CONFIGURATION
+// ===================================================
+// Monitor configuration for the dual-monitor setup
+
+// Monitor Externo (Arriba)
+output "Samsung Electric Company LS24D300G H1AK500000" {
+    mode "1920x1080@60"
+    position x=0 y=0
+}
+
+// Monitor Laptop (Abajo)
+output "BOE 0x0C02 Unknown" {
+    mode "1920x1080@60"
+    position x=960 y=1080
+}
