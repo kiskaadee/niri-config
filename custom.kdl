@@ -1,0 +1,28 @@
+// -----------------------------------------------------
+// Custom Keybindings (Niri Port)
+// -----------------------------------------------------
+
+binds {
+    // === Core Application Launchers ===
+    Mod+Return { spawn "ghostty"; }
+    Mod+B { spawn "firefox"; }
+    Mod+O { spawn "obsidian"; }
+
+    // === Active Window Management ===
+    // Quit active window and all open instances by extracting PID via Niri IPC
+    Mod+Shift+Q { spawn "bash" "-c" "niri msg focused-window | grep pid: | awk '{print $2}' | xargs kill"; }
+
+    // === Pixel-Based Window Resizing ===
+    // Niri strictly controls width via columns and height via windows
+    Mod+Alt+Right { set-column-width "+100"; }
+    Mod+Alt+Left  { set-column-width "-100"; }
+    Mod+Alt+Down  { set-window-height "+100"; }
+    Mod+Alt+Up    { set-window-height "-100"; }
+
+    // === Screenshot Utility (Grimshot Pipeline) ===
+    // Routing handled internally by the agnostic grimshot script
+    Mod+S       { spawn "bash" "-c" "~/Scripts/bin/grimshot shot_area"; }
+    Mod+Shift+S { spawn "bash" "-c" "~/Scripts/bin/grimshot shot_win"; }
+    Mod+Alt+S   { spawn "bash" "-c" "~/Scripts/bin/grimshot shot_now"; }
+    Mod+Ctrl+S  { spawn "bash" "-c" "~/Scripts/bin/grimshot shot_edit"; }
+}
