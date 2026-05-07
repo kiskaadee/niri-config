@@ -1,6 +1,7 @@
 // -----------------------------------------------------
 // Custom Keybindings (Niri Port)
 // -----------------------------------------------------
+screenshot-path null
 
 binds {
     // === Core Application Launchers ===
@@ -24,5 +25,5 @@ binds {
     Mod+S       { spawn "bash" "-c" "~/Scripts/bin/grimshot shot_area"; }
     Mod+Shift+S { spawn "bash" "-c" "~/Scripts/bin/grimshot shot_win"; }
     Mod+Alt+S   { spawn "bash" "-c" "~/Scripts/bin/grimshot shot_now"; }
-    Mod+Ctrl+S  { spawn "bash" "-c" "~/Scripts/bin/grimshot shot_edit"; }
+    Mod+Ctrl+Alt+S  { spawn "bash" "-c" "~/Scripts/bin/grimshot shot_screen"; }
 }
